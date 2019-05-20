@@ -1,0 +1,16 @@
+<h2>Student Informations</h2>
+<ul>
+<% @students.each do |student| %>
+    <li>
+        <%= student.id.to_s << " - " %>
+        <a href="/students/<%= student.id %>">
+            <%= student.firstname << " " << student.lastname %>
+        </a>
+    </li>
+<% end %>
+</ul>
+<center>
+    <a href="/students/new">
+        <button type="button" name="createinfo" style="width: 200px">Create Student Information</button>
+    </a>
+</center>

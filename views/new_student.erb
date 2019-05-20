@@ -1,0 +1,16 @@
+<h3 style="text-align: center">New Student Information</h3>
+<h5 class="error" style="text-align: center"><%= flash[:error] %></h5>
+<form action="/students" method="POST">
+    <p><span class="required">*</span><span class="normal"> Student ID : </span><input type="text" name="id" placeholder="( Format: 7 Digit ID )"/></p>
+    <p><span class="required">*</span><span class="normal"> First Name : </span><input type="text" name="firstname"/></p>
+    <p><span class="required">*</span><span class="normal"> Last Name : </span><input type="text" name="lastname"/></p>
+    <p><span class="required">*</span><span class="normal"> Gender : </span><input type="text" name="gender" placeholder="( Format: Male / Female )"/></p>
+    <p><span class="required">*</span><span class="normal"> Birthday : </span><input type="text" name="birthday" placeholder="( Format: MM/DD/YYYY )"/></p>
+    <p><span class="required">*</span><span class="normal"> Address : </span><input type="text" name="address"/></p>
+    <p><span class="required">*</span><span class="normal"> Email : </span><input type="text" name="email" placeholder="( Format: ?@?.com )"/></p>
+    <p><span class="required">*</span><span class="normal"> Phone Number : </span><input type="text" name="phonenumber" placeholder="( Format: ?-?-? )"/></p>
+    <p>GPA : <input type="text" name="gpa" placeholder="( Optional )"/></p>
+    <center>
+        <button type="submit" name="save" style="width: 100px">Save</button>
+    </center>
+</form>

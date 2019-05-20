@@ -1,0 +1,10 @@
+<h3 style="text-align: center">New Comment</h3>
+<h5 class="error" style="text-align: center"><%= flash[:error] %></h5>
+<form action="/comments" method="POST">
+    <p><span class="required">*</span><span class="normal"> Title : </span><input type="text" name="title"/></p>
+    <p>Author : <input type="text" name="author" placeholder="( Optional )"/></p>
+    <p><span class="required" style="vertical-align: top">*</span><span class="normal" style="vertical-align: top"> Content : </span><textarea type="text" name="content"></textarea></p>
+    <center>
+        <button type="submit" name="save" style="width: 100px">Save</button>
+    </center>
+</form>

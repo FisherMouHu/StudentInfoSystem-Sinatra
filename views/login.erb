@@ -1,0 +1,11 @@
+<h2>Please Login First to Edit Student Informations !</h2>
+<h5 class="error" style="text-align: center"><%= flash[:error] %></h5>
+<div>
+    <h3 style="text-align: center">Student Information System</h3>
+    <form action="/login" method="POST" style="text-align: center">
+        <h5>Username : <input type="text" name="username"/></h5>
+        <h5>Password : <input type="password" name="password"/></h5>
+        <button type="submit" name="login" style="width: 100px">Login</button>
+    </form>
+    <h6 style="text-align: center">Hint - Username : Mouhu / Password : 19951124</h6>
+</div>

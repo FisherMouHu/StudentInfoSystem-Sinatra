@@ -1,0 +1,16 @@
+<h2>Comments</h2>
+<ul>
+<% @comments.each do |comment| %>
+    <li>
+        <a href="/comments/<%= comment.id %>">
+            <%= comment.title %>
+        </a>
+        <%= " - " << comment.createtime.to_s %>
+    </li>
+<% end %>
+</ul>
+<center>
+    <a href="/comments/new">
+        <button type="button" name="createcomment" style="width: 150px">Create Comment</button>
+    </a>
+</center>

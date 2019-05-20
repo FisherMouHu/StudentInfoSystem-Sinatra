@@ -1,0 +1,130 @@
+$red: #903;
+$black: #444;
+$white: #fff;
+$main-font: Helvetica, Arial, sans-serif;
+$htmlbgcolor: #ccc;
+$bodybgcolor: #dddcd9;
+$ahovercolor: #637094;
+$headercolor: #a09b89;
+
+html {
+    background-color: $htmlbgcolor;
+}
+
+body {
+    width:700px;
+    background-color: $bodybgcolor;
+    margin:2em auto 2em;
+    padding:25px;
+    position:relative;
+    font-family: $main-font;	
+}
+
+h1 {
+  color: $red;
+  font: 32px/1 $main-font;
+}
+
+h2 {
+  color: $black;
+  font: 28px/1 $main-font;
+}
+
+h3 {
+  color: $red;
+  font: 24px/1 $main-font;
+}
+
+h5.error {
+  color: $red;
+  font: 16px/1 $main-font;
+}
+
+h5 {
+  color: $black;
+  font: 16px/1 $main-font;
+}
+
+h6 {
+  color: $black;
+  font: 12px/1 $main-font;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+div {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  border: 5px solid $red;
+  padding: 10px;
+}
+
+button {
+  font-size: 14px;
+  height: 40px;
+}
+
+header h1 {
+  font-size: 40px;
+  line-height: 80px;
+  background: transparent url(/images/logo.png) 0 0 no-repeat;
+  padding-left: 105px;
+}
+
+@mixin tabs ($background: blue, $color: yellow) {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: $background;
+    overflow: hidden;
+  }
+  li {
+    float: left;
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    background: $background;
+    color: $color;
+    &:hover {
+      background: darken($background, 20%);
+    }
+  }
+}
+
+nav {
+  @include tabs ($background: $black, $color: $white);
+  font-weight: bold;
+}
+
+p {
+  text-align: right;
+  margin-right: 240px;
+}
+
+p.left {
+  text-align: left;
+}
+
+span.required {
+  font: 16px/1.4 $main-font;
+  color: $red;
+}
+
+span.normal {
+  font: 16px/1.4 $main-font;
+}
+
+textarea {
+  width: 150px;
+  height: 200px;
+}
+
+label {
+  display: block;
+}

@@ -1,0 +1,6 @@
+<h3>Comment</h3>
+<p class="left">Title : <%= @comment.title %></p>
+<p class="left">Author : <%= @comment.author || "( Anonymous )" %></p>
+<p class="left">Create Time : <%= @comment.createtime %></p>
+<p class="left">Content : </p>
+<p class="left"><%= @comment.content.gsub(/\n/,'</p><p class="left">') %></p>

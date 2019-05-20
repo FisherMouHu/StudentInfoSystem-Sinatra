@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet" type="text/css"/>
+        <title><%= @title %></title>
+    </head>
+    <body>
+        <h1 style="text-align: center">Student Information System</h1>
+        <img src="/images/Spider.jpeg" width="100%"/>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/students">Students</a></li>
+                <li><a href="/comments">Comments</a></li>
+                <li><a href="/video">Video</a></li>
+                <li><a href="/<%= @@status %>"><%= @@status.capitalize %></a></li>
+            </ul>
+        </nav>
+        <%= yield %>
+    </body>
+</html>
