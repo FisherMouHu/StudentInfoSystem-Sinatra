@@ -1,5 +1,6 @@
 source :rubygems
 gem "sinatra"
+gem "sinatra-flash"
 gem "slim"
 gem "sass"
 gem "dm-core"
