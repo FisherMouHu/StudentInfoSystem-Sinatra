@@ -35,7 +35,7 @@ class Comment
     property :title, String
     property :author, String
     property :content, Text
-    property :createtime, DateTime
+    property :createtime, DateTime  # This is created_at
 end
 
 DataMapper.finalize
@@ -63,6 +63,10 @@ post '/students' do
     # Check if the User Logon
     if session[:login]
         # Check if All Required Information Fill in Correctly
+        if Student.find(params[:id].to_i)
+            flash[:error] = "Student ID is already in the Database, please Check again!"
+            redirect '/students/new'
+        end
         if params[:id] =~ /^\d{7}$/ && params[:firstname] != "" && params[:lastname] != "" && (params[:gender] == "Male" || params[:gender] == "Female") && params[:birthday] =~ /^\d{2}\/\d{2}\/\d{4}$/ && params[:address] != "" && params[:email] =~ /^\w+@\w+\.(com|edu)$/ && params[:phonenumber] =~ /^\d{3}-\d{3,4}-\d{4}$/
             @student = Student.new
             @student.id = params[:id].to_i
