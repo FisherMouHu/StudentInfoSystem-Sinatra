@@ -63,7 +63,7 @@ post '/students' do
     # Check if the User Logon
     if session[:login]
         # Check if All Required Information Fill in Correctly
-        if Student.find(params[:id].to_i)
+        if Student.get(params[:id].to_i)
             flash[:error] = "Student ID is already in the Database, please Check again!"
             redirect '/students/new'
         end
