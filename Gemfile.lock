@@ -24,11 +24,11 @@ GEM
     do_sqlite3 (0.10.17)
       data_objects (= 0.10.17)
     eventmachine (1.2.7)
-    ffi (1.11.0)
+    ffi (1.11.3)
     mustermann (1.0.3)
     pg (1.1.4)
     public_suffix (3.0.3)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-protection (2.0.5)
       rack
     rb-fsevent (0.10.3)
